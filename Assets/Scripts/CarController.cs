@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour {
 
+	private bool isGrounded = false;
 	private bool move = false;
-	public Rigidbody2D rigidbody2DCar;
+	public Rigidbody2D rb2D;
 	public float speed = 20f;
+	public float rotationSpeed = 7f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
 
 		move = Input.GetButton("Fire1");
@@ -22,7 +18,20 @@ public class CarController : MonoBehaviour {
 	void FixedUpdate(){
 		
 		if(move){
-			rigidbody2DCar.AddForce(transform.right * speed * Time.fixedDeltaTime * 100f, ForceMode2D.Force);
+			if(isGrounded)
+			rb2D.AddForce(transform.right * speed * Time.fixedDeltaTime * 100f, ForceMode2D.Force);
+			else
+			rb2D.AddTorque(rotationSpeed * 2 * Time.fixedDeltaTime * 100f, ForceMode2D.Force);
 		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collisionInfo){
+		isGrounded = collisionInfo.transform.tag == "Ground";
+	}
+
+	void OnCollisionExit2D(Collision2D collisionInfo)
+	{
+		if(collisionInfo.transform.tag == "Ground")
+		isGrounded = false;
 	}
 }
