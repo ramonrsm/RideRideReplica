@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LinePurple
+  m_Name: LineGreen
   m_Shader: {fileID: 4800000, guid: 3e6c1776342300545976f0ad6a86ef1b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -87,6 +87,6 @@ Material:
     - _Color: {r: 1, g: 0.9852941, b: 0.9953287, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _MKGlowColor: {r: 1, g: 0, b: 0.76551723, a: 1}
+    - _MKGlowColor: {r: 0, g: 1, b: 0.21379304, a: 1}
     - _MKGlowTexColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
