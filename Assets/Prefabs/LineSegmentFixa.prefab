@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 68076010189015562}
   - component: {fileID: 114302069773166612}
   m_Layer: 8
-  m_Name: LineSegment
+  m_Name: LineSegmentFixa
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
